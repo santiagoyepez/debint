@@ -6,7 +6,7 @@ import BdD.Datos.ConjuntoCampos;
 
 public class TablaCarrera extends Tabla{
 
-	protected TablaCarrera() {
+	public TablaCarrera() {
 		super("Carrera");
 	}
 

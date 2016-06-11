@@ -7,6 +7,9 @@
 		<title>debint</title>
 	</head>
 	<body>
-	hola
+		<form method="post" action="CrearCarreraCtrl">
+		   Nombre: <input type="text" name="txtNombre" />
+		   <input type="submit" value="Crear" />
+		</form>	
 	</body>
 </html>
