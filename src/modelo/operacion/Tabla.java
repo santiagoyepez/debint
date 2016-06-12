@@ -21,7 +21,9 @@ public abstract class Tabla {
 	
 	public abstract boolean editar(DatosBdD d);
 	
-	public abstract ResultSet seleccionarTodo(DatosBdD d);
+	public ResultSet seleccionarTodo() {
+		return op.ejecutarConsulta("SELECT * FROM " + nombreTabla + ";");
+	}
 	
 	public String getNombreTabla() {
 		return nombreTabla;

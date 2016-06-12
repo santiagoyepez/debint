@@ -41,9 +41,4 @@ public class TablaRecurso extends Tabla{
 	public boolean editar(DatosBdD d) {
 		return false;
 	}
-
-	@Override
-	public ResultSet seleccionarTodo(DatosBdD d) {
-		return null;
-	}
 }

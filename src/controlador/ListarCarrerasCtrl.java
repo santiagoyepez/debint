@@ -15,28 +15,32 @@ import javax.servlet.http.HttpServletResponse;
 import modelo.datos.DatosCarrera;
 import modelo.operacion.TablaCarrera;
 
-@WebServlet("/CrearCarreraCtrl")
-public class CrearCarreraCtrl extends HttpServlet {
+@WebServlet("/ListarCarrerasCtrl")
+public class ListarCarrerasCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    public CrearCarreraCtrl() {
+    public ListarCarrerasCtrl() {
         super();
     }
     
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String retCreacionCarrera = "Error";
-		String nombreCarrera = request.getParameter("nombreCarrera");
-		DatosCarrera dc = new DatosCarrera();
-		dc.setCarrera(nombreCarrera);
+		ArrayList<DatosCarrera> listaCarreras = new ArrayList<>();
+		
 		try {
 			TablaCarrera tc = new TablaCarrera();
-			if (tc.insertar(dc)) retCreacionCarrera = "Correcto";
-		} catch (SQLException e) {
-			retCreacionCarrera = e.toString();
-		}
-		request.setAttribute("retCreacionCarrera", retCreacionCarrera);  
+			ResultSet rs = tc.seleccionarTodo();
+			while (rs.next()) {
+				DatosCarrera dcTemp = new DatosCarrera();
+				dcTemp.setCarrera(rs.getString("Carrera"));
+				dcTemp.setIdCarrera(rs.getInt("IdCarrera"));
+				listaCarreras.add(dcTemp);
+			}
+		} catch (SQLException e) {}
+
+		if (listaCarreras.size() <= 0) listaCarreras = null;
+		request.setAttribute("listaCarreras", listaCarreras);
 		RequestDispatcher rd = request.getServletContext().getRequestDispatcher("/vistas/panelAdmin/panelAdmin.jsp");
-		rd.forward(request, response);
+		rd.forward(request, response);	
 	}
 
 }

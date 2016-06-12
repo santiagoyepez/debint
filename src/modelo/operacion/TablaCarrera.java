@@ -36,10 +36,4 @@ public class TablaCarrera extends Tabla {
 		return false;
 	}
 
-	@Override
-	public ResultSet seleccionarTodo(DatosBdD d) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
 }
