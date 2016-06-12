@@ -1,7 +1,6 @@
 package controlador;
 
 import java.io.IOException;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -13,24 +12,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import modelo.datos.DatosBdD;
-import modelo.datos.DatosCarrera;
-import modelo.operacion.TablaCarrera;
+import modelo.datos.DatosMateria;
+import modelo.operacion.TablaMateria;
 
-@WebServlet("/ListarCarrerasCtrl")
-public class ListarCarrerasCtrl extends HttpServlet {
+@WebServlet("/ListarMateriasCtrl")
+public class ListarMateriasCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    public ListarCarrerasCtrl() {
+    public ListarMateriasCtrl() {
         super();
     }
-    
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ArrayList<DatosBdD> listaCarreras = null;		
+		ArrayList<DatosMateria> listaMaterias = null;		
+		int idCarrera = Integer.parseInt(request.getParameter("idCarrera"));
 		try {
-			listaCarreras = new TablaCarrera().seleccionarTodo();
+			listaMaterias = new TablaMateria().seleccionarMateriasCarrera(idCarrera);
 		} catch (SQLException e) {}
-		if (listaCarreras != null) if (listaCarreras.size() <= 0) listaCarreras = null;
-		request.setAttribute("listaCarreras", listaCarreras);
+		if (listaMaterias != null) if (listaMaterias.size() <= 0) listaMaterias = null;
+		request.setAttribute("listaMaterias", listaMaterias);
 		RequestDispatcher rd = request.getServletContext().getRequestDispatcher("/vistas/panelAdmin/panelAdmin.jsp");
 		rd.forward(request, response);	
 	}

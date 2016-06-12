@@ -1,0 +1,11 @@
+IP:
+199.168.189.114
+
+Nombre BDD:
+integrae_appweb
+
+Usuario BDD:
+integrae_userApp
+
+Contraseña:
+AplicacionesWeb2016

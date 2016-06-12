@@ -2,6 +2,7 @@ package modelo.operacion;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import modelo.datos.*;
 
@@ -21,9 +22,9 @@ public abstract class Tabla {
 	
 	public abstract boolean editar(DatosBdD d);
 	
-	public ResultSet seleccionarTodo() {
-		return op.ejecutarConsulta("SELECT * FROM " + nombreTabla + ";");
-	}
+	public abstract ResultSet seleccionar(DatosBdD d);
+	
+	public abstract ArrayList<DatosBdD> seleccionarTodo();
 	
 	public String getNombreTabla() {
 		return nombreTabla;

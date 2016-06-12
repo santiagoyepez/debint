@@ -4,6 +4,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Types;
+import java.util.ArrayList;
 
 import modelo.datos.DatosBdD;
 import modelo.datos.DatosRecurso;
@@ -39,6 +40,18 @@ public class TablaSolicitudRecurso extends Tabla {
 	public boolean editar(DatosBdD d) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public ResultSet seleccionar(DatosBdD d) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<DatosBdD> seleccionarTodo() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
