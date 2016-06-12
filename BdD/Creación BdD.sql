@@ -26,7 +26,7 @@ AUTO_INCREMENT = 1;
 CREATE TABLE `Materia` (
 `IdMateria` int NOT NULL AUTO_INCREMENT,
 `IdCarrera` int NOT NULL,
-`Materia` varchar(50) NOT NULL,
+`Materia` varchar(70) NOT NULL,
 PRIMARY KEY (`IdMateria`) 
 )
 AUTO_INCREMENT = 1;
@@ -42,10 +42,10 @@ AUTO_INCREMENT = 1;
 CREATE TABLE `Recurso` (
 `IdRecurso` int NOT NULL AUTO_INCREMENT,
 `IdUsuario` int NOT NULL,
-`IdCategoría` int NOT NULL,
+`IdCategoria` int NOT NULL,
 `Titulo` varchar(50) NOT NULL,
-`Descripción` varchar(100) NOT NULL,
-`Visible` tinyint NOT NULL,
+`Descripcion` varchar(250) NOT NULL,
+`Visible` bit NOT NULL,
 `IdSolicitud` int NULL,
 PRIMARY KEY (`IdRecurso`) 
 )
@@ -54,7 +54,7 @@ AUTO_INCREMENT = 1;
 CREATE TABLE `SolicitudRecurso` (
 `IdSolicitud` int NOT NULL AUTO_INCREMENT,
 `RecursoSolicitado` varchar(100) NOT NULL,
-`Comentario` longblob NULL,
+`Comentario` varchar(250) NULL,
 `Puntos` int NULL,
 PRIMARY KEY (`IdSolicitud`) 
 )
@@ -77,7 +77,7 @@ ALTER TABLE `Categoria` ADD CONSTRAINT `FK_Categoria_Periodo` FOREIGN KEY (`IdPe
 ALTER TABLE `Comentario` ADD CONSTRAINT `FK_Comentario_Recurso` FOREIGN KEY (`IdRecurso`) REFERENCES `Recurso` (`IdRecurso`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE `Comentario` ADD CONSTRAINT `FK_Comentario_Usuario` FOREIGN KEY (`IdUsuario`) REFERENCES `Usuario` (`IdUsuario`) ON DELETE CASCADE ON UPDATE NO ACTION;
 ALTER TABLE `Materia` ADD CONSTRAINT `FK_Materia_Carrera` FOREIGN KEY (`IdCarrera`) REFERENCES `Carrera` (`IdCarrera`) ON DELETE CASCADE ON UPDATE NO ACTION;
-ALTER TABLE `Recurso` ADD CONSTRAINT `FK_Recurso_Categoria` FOREIGN KEY (`IdCategoría`) REFERENCES `Categoria` (`IdCategoria`) ON DELETE NO ACTION ON UPDATE CASCADE;
+ALTER TABLE `Recurso` ADD CONSTRAINT `FK_Recurso_Categoria` FOREIGN KEY (`IdCategoria`) REFERENCES `Categoria` (`IdCategoria`) ON DELETE NO ACTION ON UPDATE CASCADE;
 ALTER TABLE `Recurso` ADD CONSTRAINT `FK_Recurso_SolicitudRecurso` FOREIGN KEY (`IdSolicitud`) REFERENCES `SolicitudRecurso` (`IdSolicitud`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 ALTER TABLE `Recurso` ADD CONSTRAINT `FK_Recurso_Usuario` FOREIGN KEY (`IdUsuario`) REFERENCES `Usuario` (`IdUsuario`) ON DELETE CASCADE ON UPDATE NO ACTION;
 

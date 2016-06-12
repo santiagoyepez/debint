@@ -46,7 +46,4 @@ public class TablaRecurso extends Tabla{
 	public ResultSet seleccionarTodo(DatosBdD d) {
 		return null;
 	}
-
-	
-
 }
