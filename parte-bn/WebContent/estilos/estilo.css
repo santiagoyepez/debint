@@ -1,0 +1,68 @@
+.glyphicon {
+    font-size: 20px;
+    color:white;
+    
+}
+
+div#logo{
+    color: white;
+    background: #FFD54F;
+        
+}
+p{
+    padding-right: 16px;
+    padding-left: 16px;
+    width: 100%;
+    font-size: 20px;
+    padding-bottom: 50px;
+    line-height: 32px;
+    margin-bottom: 0;
+    padding: 0 38px 40px 0;
+    font-family: "RobotoDraft","Roboto",sans-serif;
+    
+}
+
+div#usuario{
+    
+    font-size: 15px;
+    
+    font-family: "RobotoDraft","Roboto",sans-serif;
+    
+}
+
+
+
+img#logo1{
+     max-height: 40px
+    
+    
+ }
+img#star{
+     max-height: 40px
+    
+    
+ }
+
+
+img#libro{
+     max-height: 170px
+    
+    
+ }
+
+div#Sub{
+        color: #00bcd4;
+        font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+    margin-bottom: 30px;
+    text-align: center
+}
+
+div#sig{
+    color: white
+}
+
+div#form{
+    background-color:#2B2B2B;
+}
