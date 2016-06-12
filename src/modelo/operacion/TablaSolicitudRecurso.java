@@ -12,8 +12,7 @@ import modelo.datos.DatosSolicitudRecurso;
 public class TablaSolicitudRecurso extends Tabla {
 
 	public TablaSolicitudRecurso() throws SQLException {
-		super("solicitudrecurso");
-		// TODO Auto-generated constructor stub
+		super("SolicitudRecurso");
 	}
 
 	@Override

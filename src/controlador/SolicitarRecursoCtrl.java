@@ -40,9 +40,9 @@ public class SolicitarRecursoCtrl extends HttpServlet {
 			respuesta = e.toString();
 		}
 		
-		/*request.setAttribute("ret", respuesta);   
-		RequestDispatcher rd = request.getServletContext().getRequestDispatcher("/vistas/recurso/compartirRecurso.jsp");
-		rd.forward(request, response);*/
+		request.setAttribute("ret", respuesta);   
+		RequestDispatcher rd = request.getServletContext().getRequestDispatcher("/vistas/recurso/solicitudRecurso.jsp");
+		rd.forward(request, response);
 	}
 
 }
