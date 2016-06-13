@@ -4,6 +4,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 import modelo.datos.DatosBdD;
+import modelo.datos.DatosCarrera;
 import modelo.datos.DatosRecurso;
 
 public class TablaRecurso extends Tabla{
@@ -52,7 +53,23 @@ public class TablaRecurso extends Tabla{
 
 	@Override
 	public ArrayList<DatosBdD> seleccionarTodo() {
-		// TODO Auto-generated method stub
-		return null;
+		ArrayList<DatosBdD> ret = new ArrayList<>();
+		ResultSet rs = op.ejecutarConsulta("SELECT * FROM " + nombreTabla + ";");
+		try {
+			while (rs.next()) {
+				DatosRecurso dcTemp = new DatosRecurso();
+				dcTemp.setDescripcion(rs.getString("Descripcion"));
+				dcTemp.setIdCategoria(rs.getInt("IdCategoria"));
+				dcTemp.setIdRecurso(rs.getInt("IdRecurso"));
+				//dcTemp.setIdSolicitud(rs.getInt("IdSolicitud"));
+				dcTemp.setIdUsuario(rs.getInt("IdUsuario"));
+				dcTemp.setNombreArchivo(rs.getString("NombreArchivo"));
+				dcTemp.setTitulo(rs.getString("Titulo"));
+				ret.add(dcTemp);
+			}
+		} catch (SQLException e) {
+			ret = null;
+		}
+		return ret;
 	}
 }
