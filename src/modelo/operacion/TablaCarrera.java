@@ -3,29 +3,24 @@ package modelo.operacion;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Types;
 import java.util.ArrayList;
 
 import modelo.datos.DatosBdD;
-import modelo.datos.DatosRecurso;
-import modelo.datos.DatosSolicitudRecurso;
+import modelo.datos.DatosCarrera;
 
-public class TablaSolicitudRecurso extends Tabla {
+public class TablaCarrera extends Tabla {
 
-	public TablaSolicitudRecurso() throws SQLException {
-		super("SolicitudRecurso");
+	public TablaCarrera() throws SQLException {
+		super("Carrera");
 	}
 
 	@Override
 	public boolean insertar(DatosBdD d) throws SQLException {
 		boolean ret = false;
-		DatosSolicitudRecurso dsr = (DatosSolicitudRecurso) d;
-		String sqlInsercion = "insert into " + getNombreTabla() + " (RecursoSolicitado, Comentario, Puntos) " +
-								"VALUES (?, ?, ?);";
+		DatosCarrera dc = (DatosCarrera) d;
+		String sqlInsercion = "insert into " + getNombreTabla() + " (Carrera) VALUES (?);";		
 		PreparedStatement pst = op.getPreparedStatement(sqlInsercion);
-		pst.setString(1, dsr.getRecursoSolicitado());
-		pst.setString(2, dsr.getComentario());
-		pst.setInt(3, dsr.getPuntos());
+		pst.setString(1, dc.getCarrera());
 		ret = (pst.executeUpdate() != 0);	
 		return ret;
 	}
@@ -50,8 +45,19 @@ public class TablaSolicitudRecurso extends Tabla {
 
 	@Override
 	public ArrayList<DatosBdD> seleccionarTodo() {
-		// TODO Auto-generated method stub
-		return null;
+		ArrayList<DatosBdD> ret = new ArrayList<>();
+		ResultSet rs = op.ejecutarConsulta("SELECT * FROM " + nombreTabla + ";");
+		try {
+			while (rs.next()) {
+				DatosCarrera dcTemp = new DatosCarrera();
+				dcTemp.setCarrera(rs.getString("Carrera"));
+				dcTemp.setIdCarrera(rs.getInt("IdCarrera"));
+				ret.add(dcTemp);
+			}
+		} catch (SQLException e) {
+			ret = null;
+		}
+		return ret;
 	}
 
 }
