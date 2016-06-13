@@ -3,7 +3,7 @@ package modelo.datos;
 public class DatosRecurso extends DatosBdD{
 	private int idRecurso, idUsuario, idCategoria, idSolicitud;
 	private boolean visible;
-	private String titulo, descripcion;
+	private String titulo, descripcion, nombreArchivo;
 	
 	public int getIdRecurso() {
 		return idRecurso;
@@ -46,6 +46,12 @@ public class DatosRecurso extends DatosBdD{
 	}
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
+	}
+	public String getNombreArchivo() {
+		return nombreArchivo;
+	}
+	public void setNombreArchivo(String nombreArchivo) {
+		this.nombreArchivo = nombreArchivo;
 	}
 	
 	

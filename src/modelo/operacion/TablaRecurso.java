@@ -9,25 +9,26 @@ import modelo.datos.DatosRecurso;
 public class TablaRecurso extends Tabla{
 
 	public TablaRecurso() throws SQLException {
-		super("recurso");
+		super("Recurso");
 	}
 
 	@Override
 	public boolean insertar(DatosBdD d) throws SQLException {
 		boolean ret = false;
 		DatosRecurso dr = (DatosRecurso) d;
-		String sqlInsercion = "insert into " + getNombreTabla() + " (idUsuario, idCategoria, Titulo, Descripcion, Visible, idSolicitud) " +
-								"VALUES (?, ?, ?, ?, ?, ?);";
+		String sqlInsercion = "insert into " + getNombreTabla() + " (idUsuario, idCategoria, Titulo, Descripcion, Visible, NombreArchivo, idSolicitud) " +
+								"VALUES (?, ?, ?, ?, ?, ?, ?);";
 		PreparedStatement pst = op.getPreparedStatement(sqlInsercion);
 		pst.setInt(1, dr.getIdUsuario());
 		pst.setInt(2, dr.getIdCategoria());
 		pst.setString(3, dr.getTitulo());
 		pst.setString(4, dr.getDescripcion());
 		pst.setBoolean(5, dr.getVisible());
+		pst.setString(6, dr.getNombreArchivo());
 		if (dr.getIdSolicitud() == 0) {
-			pst.setNull(6, Types.NULL);
+			pst.setNull(7, Types.NULL);
 		} else {
-			pst.setInt(6,  dr.getIdSolicitud());
+			pst.setInt(7, dr.getIdSolicitud());
 		}
 		ret = (pst.executeUpdate() != 0);	
 		return ret;
