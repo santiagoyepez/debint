@@ -18,7 +18,7 @@ import modelo.datos.DatosRecurso;
 import modelo.operacion.TablaRecurso;
 
 @WebServlet("/CompartirRecursoCtrl")
-@MultipartConfig(location="D:/debint")
+@MultipartConfig(location="D:/Proyectos/eclipse/debint/WebContent/subidas")//location="D:/debint"
 public class CompartirRecursoCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private String nombreArchivo;

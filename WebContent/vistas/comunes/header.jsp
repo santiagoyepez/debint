@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/debint/index.jsp">DEBIT</a>
+                <a class="navbar-brand" href="/debint/index.jsp">DEBINT</a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
