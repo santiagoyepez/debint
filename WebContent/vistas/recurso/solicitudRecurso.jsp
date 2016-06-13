@@ -1,4 +1,4 @@
-<% String tituloPagina="Compartir recurso"; %>
+<% String tituloPagina="Solicitar recurso"; %>
 <%@include file="/vistas/comunes/header.jsp"%>
 <mark>Resultado: <%= request.getAttribute("ret") %> </mark> 
 <form action="../../SolicitarRecursoCtrl" method="post">

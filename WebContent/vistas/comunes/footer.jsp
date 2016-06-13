@@ -1,6 +1,21 @@
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  </body>
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="/debint/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/debint/js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="/debint/js/plugins/morris/raphael.min.js"></script>
+    <script src="/debint/js/plugins/morris/morris.min.js"></script>
+    <script src="/debint/js/plugins/morris/morris-data.js"></script>
+
+</body>
+
 </html>

@@ -1,15 +1,247 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-		<title>debint</title>
-	</head>
-	<body>
-		<form method="post" action="CrearCarreraCtrl">
-		   Nombre: <input type="text" name="txtNombre" />
-		   <input type="submit" value="Crear" />
-		</form>	
-	</body>
-</html>
+<% String tituloPagina="Recursos Disponibles"; %>
+<%@include file="/vistas/comunes/header.jsp"%>
+
+                	<div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel-group">
+                        
+						    <div class="col-md-6">
+							    <div class="panel panel-primary">
+							      <div class="panel-heading">JPA</div>
+							      <div class="panel-body">
+							      	<p>Descripción:
+							      	<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula ut quam placerat rhoncus. Integer sagittis nibh et nunc tincidunt varius. Sed sapien nisi, elementum et accumsan sit amet, placerat eu diam. In hac habitasse platea dictumst.</p>
+							      	
+							      	<p>Carrera:
+							      	<br>Ingeniería en Sistemas</p>
+							      	
+							      	<p>Materia:
+							      	<br>Aplicaciones Web</p>
+							      	
+							      	<p>Periodo:
+							      	<br>2016-A</p>
+							      	
+							      	<a href="#" class="btn btn-primary">Leer Más</a>
+							      </div>
+							    </div>
+						    </div>
+						    
+							<div class="col-md-6">
+							    <div class="panel panel-primary">
+							      <div class="panel-heading">JPA</div>
+							      <div class="panel-body">
+							      	<p>Descripción:
+							      	<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula ut quam placerat rhoncus. Integer sagittis nibh et nunc tincidunt varius. Sed sapien nisi, elementum et accumsan sit amet, placerat eu diam. In hac habitasse platea dictumst.</p>
+							      	
+							      	<p>Carrera:
+							      	<br>Ingeniería en Sistemas</p>
+							      	
+							      	<p>Materia:
+							      	<br>Aplicaciones Web</p>
+							      	
+							      	<p>Periodo:
+							      	<br>2016-A</p>
+							      	
+							      	<a href="#" class="btn btn-primary">Leer Más</a>
+							      </div>
+							    </div>
+						    </div>
+						    
+						    <div class="col-md-6">
+							    <div class="panel panel-primary">
+							      <div class="panel-heading">JPA</div>
+							      <div class="panel-body">
+							      	<p>Descripción:
+							      	<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula ut quam placerat rhoncus. Integer sagittis nibh et nunc tincidunt varius. Sed sapien nisi, elementum et accumsan sit amet, placerat eu diam. In hac habitasse platea dictumst.</p>
+							      	
+							      	<p>Carrera:
+							      	<br>Ingeniería en Sistemas</p>
+							      	
+							      	<p>Materia:
+							      	<br>Aplicaciones Web</p>
+							      	
+							      	<p>Periodo:
+							      	<br>2016-A</p>
+							      	
+							      	<a href="#" class="btn btn-primary">Leer Más</a>
+							      </div>
+							    </div>
+						    </div>
+						    
+						    <div class="col-md-6">
+							    <div class="panel panel-primary">
+							      <div class="panel-heading">JPA</div>
+							      <div class="panel-body">
+							      	<p>Descripción:
+							      	<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula ut quam placerat rhoncus. Integer sagittis nibh et nunc tincidunt varius. Sed sapien nisi, elementum et accumsan sit amet, placerat eu diam. In hac habitasse platea dictumst.</p>
+							      	
+							      	<p>Carrera:
+							      	<br>Ingeniería en Sistemas</p>
+							      	
+							      	<p>Materia:
+							      	<br>Aplicaciones Web</p>
+							      	
+							      	<p>Periodo:
+							      	<br>2016-A</p>
+							      	
+							      	<a href="#" class="btn btn-primary">Leer Más</a>
+							      </div>
+							    </div>
+						    </div>
+						    
+						    <div class="col-md-6">
+							    <div class="panel panel-primary">
+							      <div class="panel-heading">JPA</div>
+							      <div class="panel-body">
+							      	<p>Descripción:
+							      	<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula ut quam placerat rhoncus. Integer sagittis nibh et nunc tincidunt varius. Sed sapien nisi, elementum et accumsan sit amet, placerat eu diam. In hac habitasse platea dictumst.</p>
+							      	
+							      	<p>Carrera:
+							      	<br>Ingeniería en Sistemas</p>
+							      	
+							      	<p>Materia:
+							      	<br>Aplicaciones Web</p>
+							      	
+							      	<p>Periodo:
+							      	<br>2016-A</p>
+							      	
+							      	<a href="#" class="btn btn-primary">Leer Más</a>
+							      </div>
+							    </div>
+						    </div>
+						    
+						    <div class="col-md-6">
+							    <div class="panel panel-primary">
+							      <div class="panel-heading">JPA</div>
+							      <div class="panel-body">
+							      	<p>Descripción:
+							      	<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula ut quam placerat rhoncus. Integer sagittis nibh et nunc tincidunt varius. Sed sapien nisi, elementum et accumsan sit amet, placerat eu diam. In hac habitasse platea dictumst.</p>
+							      	
+							      	<p>Carrera:
+							      	<br>Ingeniería en Sistemas</p>
+							      	
+							      	<p>Materia:
+							      	<br>Aplicaciones Web</p>
+							      	
+							      	<p>Periodo:
+							      	<br>2016-A</p>
+							      	
+							      	<a href="#" class="btn btn-primary">Leer Más</a>
+							      </div>
+							    </div>
+						    </div>
+						    
+						    <div class="col-md-6">
+							    <div class="panel panel-primary">
+							      <div class="panel-heading">JPA</div>
+							      <div class="panel-body">
+							      	<p>Descripción:
+							      	<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula ut quam placerat rhoncus. Integer sagittis nibh et nunc tincidunt varius. Sed sapien nisi, elementum et accumsan sit amet, placerat eu diam. In hac habitasse platea dictumst.</p>
+							      	
+							      	<p>Carrera:
+							      	<br>Ingeniería en Sistemas</p>
+							      	
+							      	<p>Materia:
+							      	<br>Aplicaciones Web</p>
+							      	
+							      	<p>Periodo:
+							      	<br>2016-A</p>
+							      	
+							      	<a href="#" class="btn btn-primary">Leer Más</a>
+							      </div>
+							    </div>
+						    </div>
+						    
+						    <div class="col-md-6">
+							    <div class="panel panel-primary">
+							      <div class="panel-heading">JPA</div>
+							      <div class="panel-body">
+							      	<p>Descripción:
+							      	<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula ut quam placerat rhoncus. Integer sagittis nibh et nunc tincidunt varius. Sed sapien nisi, elementum et accumsan sit amet, placerat eu diam. In hac habitasse platea dictumst.</p>
+							      	
+							      	<p>Carrera:
+							      	<br>Ingeniería en Sistemas</p>
+							      	
+							      	<p>Materia:
+							      	<br>Aplicaciones Web</p>
+							      	
+							      	<p>Periodo:
+							      	<br>2016-A</p>
+							      	
+							      	<a href="#" class="btn btn-primary">Leer Más</a>
+							      </div>
+							    </div>
+						    </div>
+						    
+						    <div class="col-md-6">
+							    <div class="panel panel-primary">
+							      <div class="panel-heading">JPA</div>
+							      <div class="panel-body">
+							      	<p>Descripción:
+							      	<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula ut quam placerat rhoncus. Integer sagittis nibh et nunc tincidunt varius. Sed sapien nisi, elementum et accumsan sit amet, placerat eu diam. In hac habitasse platea dictumst.</p>
+							      	
+							      	<p>Carrera:
+							      	<br>Ingeniería en Sistemas</p>
+							      	
+							      	<p>Materia:
+							      	<br>Aplicaciones Web</p>
+							      	
+							      	<p>Periodo:
+							      	<br>2016-A</p>
+							      	
+							      	<a href="#" class="btn btn-primary">Leer Más</a>
+							      </div>
+							    </div>
+						    </div>
+						    
+						    <div class="col-md-6">
+							    <div class="panel panel-primary">
+							      <div class="panel-heading">JPA</div>
+							      <div class="panel-body">
+							      	<p>Descripción:
+							      	<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula ut quam placerat rhoncus. Integer sagittis nibh et nunc tincidunt varius. Sed sapien nisi, elementum et accumsan sit amet, placerat eu diam. In hac habitasse platea dictumst.</p>
+							      	
+							      	<p>Carrera:
+							      	<br>Ingeniería en Sistemas</p>
+							      	
+							      	<p>Materia:
+							      	<br>Aplicaciones Web</p>
+							      	
+							      	<p>Periodo:
+							      	<br>2016-A</p>
+							      	
+							      	<a href="#" class="btn btn-primary">Leer Más</a>
+							      </div>
+							    </div>
+						    </div>
+						    
+						    <div class="col-md-6">
+							    <div class="panel panel-primary">
+							      <div class="panel-heading">JPA</div>
+							      <div class="panel-body">
+							      	<p>Descripción:
+							      	<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula ut quam placerat rhoncus. Integer sagittis nibh et nunc tincidunt varius. Sed sapien nisi, elementum et accumsan sit amet, placerat eu diam. In hac habitasse platea dictumst.</p>
+							      	
+							      	<p>Carrera:
+							      	<br>Ingeniería en Sistemas</p>
+							      	
+							      	<p>Materia:
+							      	<br>Aplicaciones Web</p>
+							      	
+							      	<p>Periodo:
+							      	<br>2016-A</p>
+							      	
+							      	<a href="#" class="btn btn-primary">Leer Más</a>
+							      </div>
+							    </div>
+						    </div>
+						    
+						    
+
+</div>
+
+<%@include file="/vistas/comunes/footer.jsp"%>
+                    </div>
+                </div>
+                <!-- /.row -->
+                

@@ -1,10 +1,9 @@
 <%@ page import="java.util.List, model.Periodo" %>
 <% String tituloPagina="Administración de Periodos Académicos"; %>
 <%@include file="/vistas/comunes/header.jsp"%>
-<div class="container-fluid">
-	<div class="container">
-		<div class="col-md-12">
-			<h2>Agregar nuevo periodo académico</h2>
+                <div class="row">
+                    <div class="col-lg-12">
+                        			<h2>Agregar nuevo periodo académico</h2>
 		<%
 			
 			if(request.getAttribute("respuesta")!=null){
@@ -29,10 +28,13 @@
 				
 				<button type="submit" class="btn btn-primary">Agregar</button>
 			</form>
-		</div>
-		
-		<div class="col-md-12">
-			<h2>Periodos Académicos Registrados</h2>
+                    </div>
+                </div>
+                <!-- /.row -->
+                
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2>Periodos Académicos Registrados</h2>
 			<table class="table table-striped">
 				<tr>
 				    <th>Año</th>
@@ -59,9 +61,9 @@
 					%>
 				
 			</table>
-		</div>
-		
-		
-	</div>
-</div>
+                    </div>
+                </div>
+                <!-- /.row -->
+                
+          
 <%@include file="/vistas/comunes/footer.jsp"%>
