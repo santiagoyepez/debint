@@ -71,6 +71,15 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                 	<li class="separador">
+                     <p>General</p>
+                    </li>
+                    <li>
+                        <a href="/debint/vistas/generales/todosRecursos.jsp"><i class="fa fa-file-text-o" aria-hidden="true"></i> Recursos Disponibles</a>
+                    </li>
+                    <li>
+                        <a href="/debint/vistas/generales/todasSolicitudes.jsp"><i class="fa fa-comment-o" aria-hidden="true"></i> Solicitudes de recursos</a>
+                    </li>
+                	<li class="separador">
                      <p>Configuración</p>
                     </li>
                     <!-- <li class="active"> -->
