@@ -1,6 +1,7 @@
 package modelo.operacion;
 
 import java.sql.*;
+import java.util.ArrayList;
 
 import modelo.datos.DatosBdD;
 import modelo.datos.DatosRecurso;
@@ -43,7 +44,14 @@ public class TablaRecurso extends Tabla{
 	}
 
 	@Override
-	public ResultSet seleccionarTodo(DatosBdD d) {
+	public ResultSet seleccionar(DatosBdD d) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ArrayList<DatosBdD> seleccionarTodo() {
+		// TODO Auto-generated method stub
 		return null;
 	}
 }
