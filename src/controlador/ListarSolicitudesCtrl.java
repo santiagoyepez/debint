@@ -12,26 +12,24 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import modelo.datos.DatosBdD;
-import modelo.operacion.TablaCarrera;
-import modelo.operacion.TablaRecurso;
+import modelo.operacion.TablaSolicitudRecurso;
 
-@WebServlet("/ListarRecursosCtrl")
-public class ListarRecursosCtrl extends HttpServlet {
+@WebServlet("/ListarSolicitudesCtrl")
+public class ListarSolicitudesCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-    public ListarRecursosCtrl() {
+    public ListarSolicitudesCtrl() {
         super();
     }
-
+    
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ArrayList<DatosBdD> listaRecursos = null;		
+		ArrayList<DatosBdD> listaSolicitudes = null;		
 		try {
-			listaRecursos = new TablaRecurso().seleccionarTodo();
+			listaSolicitudes = new TablaSolicitudRecurso().seleccionarTodo();
 		} catch (SQLException e) {}
-		if (listaRecursos != null) if (listaRecursos.size() <= 0) listaRecursos = null;
-		request.setAttribute("listaRecursos", listaRecursos);
-		RequestDispatcher rd = request.getServletContext().getRequestDispatcher("/vistas/generales/todosRecursos.jsp");
+		if (listaSolicitudes != null) if (listaSolicitudes.size() <= 0) listaSolicitudes = null;
+		request.setAttribute("listaSolicitudes", listaSolicitudes);
+		RequestDispatcher rd = request.getServletContext().getRequestDispatcher("/vistas/generales/todasSolicitudes.jsp");
 		rd.forward(request, response);	
 	}
-
 }

@@ -9,16 +9,16 @@
 		<h3>Crear carrera</h3>
 		<mark>Resultado: <%= request.getAttribute("retCreacionCarrera") %> </mark> 
 		<form action="../../CrearCarreraCtrl" method="post">
-			Nombre de la carrera: <input type="text" name="nombreCarrera">
-			<input type="submit" value="Crear">
+			Nombre de la carrera: <input type="text" name="nombreCarrera" class="form-control">
+			<input type="submit" value="Crear" class="btn btn-primary">
 		</form>
 	</p>
 	<p>	
 		<h3>Listado de carreras</h3>
 		<form action="../../ListarCarrerasCtrl" method="post">
-			<input type="submit" value="Listar carreras">
+			<input type="submit" value="Listar carreras" >
 		</form>
-		<table>
+		<table class="table table-striped">
 			<tr>
 				<th>Id</th>
 				<th>Nombre de carrera</th>

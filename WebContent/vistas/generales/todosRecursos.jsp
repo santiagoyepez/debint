@@ -4,9 +4,6 @@
 <%@include file="/vistas/comunes/header.jsp"%>
 <%@ page import="java.util.List" %>
 
-<form action="../../ListarRecursosCtrl" method="post">
-			<input type="submit" value="Listar recursos">
-		</form>
 
                 	<div class="row">
                     <div class="col-lg-12">

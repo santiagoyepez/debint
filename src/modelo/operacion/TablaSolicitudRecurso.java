@@ -50,8 +50,21 @@ public class TablaSolicitudRecurso extends Tabla {
 
 	@Override
 	public ArrayList<DatosBdD> seleccionarTodo() {
-		// TODO Auto-generated method stub
-		return null;
+		ArrayList<DatosBdD> ret = new ArrayList<>();
+		ResultSet rs = op.ejecutarConsulta("SELECT * FROM " + nombreTabla + ";");
+		try {
+			while (rs.next()) {
+				DatosSolicitudRecurso dcTemp = new DatosSolicitudRecurso();
+				dcTemp.setIdSolicitud(rs.getInt("IdSolicitud"));
+				dcTemp.setPuntos(rs.getInt("Puntos"));
+				dcTemp.setComentario(rs.getString("Comentario"));
+				dcTemp.setRecursoSolicitado(rs.getString("RecursoSolicitado"));
+				ret.add(dcTemp);
+			}
+		} catch (SQLException e) {
+			ret = null;
+		}
+		return ret;
 	}
 
 }

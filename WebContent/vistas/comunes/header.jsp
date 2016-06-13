@@ -74,10 +74,10 @@
                      <p>General</p>
                     </li>
                     <li>
-                        <a href="/debint/vistas/generales/todosRecursos.jsp"><i class="fa fa-file-text-o" aria-hidden="true"></i> Recursos Disponibles</a>
+                        <a href="/debint/ListarRecursosCtrl"><i class="fa fa-file-text-o" aria-hidden="true"></i> Recursos Disponibles</a>
                     </li>
                     <li>
-                        <a href="/debint/vistas/generales/todasSolicitudes.jsp"><i class="fa fa-comment-o" aria-hidden="true"></i> Solicitudes de recursos</a>
+                        <a href="/debint/ListarSolicitudesCtrl"><i class="fa fa-comment-o" aria-hidden="true"></i> Solicitudes de recursos</a>
                     </li>
                 	<li class="separador">
                      <p>Configuración</p>
