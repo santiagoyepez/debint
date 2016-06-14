@@ -25,7 +25,7 @@
 							      	<p>Archivo:
 							      	<br><%= dr.getNombreArchivo() %></p>
 							      	<a href="http://localhost:8080/debint/subidas/<%= dr.getNombreArchivo()%>" download="<%= dr.getNombreArchivo() %>">
-										Descargar Archivo
+										<i class="fa fa-download" aria-hidden="true"></i> Descargar Archivo
 									</a>
 							      </div>
 							    </div>

@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/debint/index.jsp">DEBINT</a>
+                <a class="navbar-brand" href="/debint/ListarRecursosCtrl"><img src="/debint/img/logo.png" id="logo" alt="logo de debint"/><p id="textoLogo">DEBINT</p></a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">

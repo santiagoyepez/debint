@@ -4,20 +4,31 @@
 <% String tituloPagina="Panel de administración"; %>
 <%@include file="/vistas/comunes/header.jsp"%>
 <%@ page import="java.util.List" %>
+<div class="row">
+ <div class="col-lg-12">
 	<h2>Carreras</h2>
 	<p>
 		<h3>Crear carrera</h3>
-		<mark>Resultado: <%= request.getAttribute("retCreacionCarrera") %> </mark> 
-		<form action="../../CrearCarreraCtrl" method="post">
-			Nombre de la carrera: <input type="text" name="nombreCarrera" class="form-control">
+		<%
+			if(request.getAttribute("retCreacionCarrera")!=null){
+				out.print("<div class=\"alert alert-success\" role=\"alert\">"+request.getAttribute("retCreacionCarrera")+"</div>");
+			}
+		
+		%>
+		<form action="/debint/CrearCarreraCtrl" method="post">
+			  	<div class="form-group">
+			    	<label>Nombre de la carrera:</label>
+			    	<input type="text" name="nombreCarrera" class="form-control"/>
+			  	</div>
+			  	
 			<input type="submit" value="Crear" class="btn btn-primary">
 		</form>
 	</p>
 	<p>	
 		<h3>Listado de carreras</h3>
 		<form action="../../ListarCarrerasCtrl" method="post">
-			<input type="submit" value="Listar carreras" >
-		</form>
+			<input type="submit" value="Listar carreras" class="btn btn-primary">
+		</form> 
 		<table class="table table-striped">
 			<tr>
 				<th>Id</th>
@@ -42,20 +53,39 @@
 	<h2>Materias</h2>	
 	<p>
 		<h3>Crear materia</h3>
-		<mark>Resultado: <%= request.getAttribute("retCreacionMateria") %> </mark> 
-		<form action="../../CrearMateriaCtrl" method="post">
-			Carrera (id): <input type="text" name="idCarrera">
-			Nombre de la materia: <input type="text" name="nombreMateria">
-			<input type="submit" value="Crear">
+		<%
+			
+			if(request.getAttribute("retCreacionMateria")!=null){
+				out.print("<div class=\"alert alert-success\" role=\"alert\">"+request.getAttribute("retCreacionMateria")+"</div>");
+			}
+		
+		%>
+		<form action="/debint/CrearMateriaCtrl" method="post">
+		<div class="form-group">
+	    	<label>Carrera (id):</label>
+	    	<input type="text" name="idCarrera" class="form-control"/>
+	  	</div>
+	  	
+	  	<div class="form-group">
+	    	<label>Nombre de la materia:</label>
+	    	<input type="text" name="nombreMateria" class="form-control"/>
+	  	</div>
+
+			<input type="submit" value="Crear" class="btn btn-primary">
 		</form>
 	</p>
 	<p>
 		<h3>Listado de materias</h3>
 		<form action="../../ListarMateriasCtrl" method="post">
-			Carrera (id): <input type="text" name="idCarrera">
-			<input type="submit" value="Listar materias">
+		  	<div class="form-group">
+		    	<label>Carrera (id):</label>
+		    	<input type="text" name="idCarrera" class="form-control"/>
+		  	</div>
+		  	
+
+			<input type="submit" value="Listar materias" class="btn btn-primary">
 		</form>
-		<table>
+		<table class="table table-striped">
 			<tr>
 				<th>idMateria</th>
 				<th>idCarrera</th>
@@ -77,4 +107,6 @@
 			%>
 		</table>
 	</p>
+	</div>
+	</div>
 <%@include file="/vistas/comunes/footer.jsp"%>

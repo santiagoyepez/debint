@@ -3,12 +3,29 @@
 
 <div class="row">
                     <div class="col-lg-12">
-                        <mark>Resultado: <%= request.getAttribute("ret") %> </mark> 
+                    <%
+			
+			if(request.getAttribute("ret")!=null){
+				out.print("<div class=\"alert alert-success\" role=\"alert\">"+request.getAttribute("ret")+"</div>");
+			}
+		
+		%>
 <form action="../../CompartirRecursoCtrl" method="post" enctype="multipart/form-data">
-	Titulo: <input type="text" name="titulo"/>
-	Descripcion: <input type="text" name="descripcion"/>	
-	<input type="file" name="files" id="files"/>
-	<input type="submit" value="Subir"/>
+	<div class="form-group">
+    	<label>Titulo:</label>
+    	<input type="text" name="titulo" class="form-control"/>
+  	</div>
+  	
+  	<div class="form-group">
+    	<label>Descripcion:</label>
+    	<input type="text" name="descripcion" class="form-control"/>
+  	</div>
+
+	<div class="form-group">	
+		<input type="file" name="files" id="files"/>
+	</div>
+	
+	<input type="submit" value="Subir" class="btn btn-primary"/>
 </form>
                     </div>
                 </div>

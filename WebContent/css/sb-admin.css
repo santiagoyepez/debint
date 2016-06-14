@@ -241,3 +241,19 @@ ul.alert-dropdown {
     margin-bottom: 20px;
     border-radius: 4px;
 }
+
+div#page-wrapper {
+    min-height: 719px;
+}
+
+#logo {
+    width: 25px;
+    float: left;
+}
+
+#textoLogo {
+    float: left;
+    margin-left: 8px;
+    color: #fff;
+    margin-top: 5px;
+}
