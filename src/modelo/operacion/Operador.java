@@ -13,7 +13,7 @@ public class Operador {
 	}
 	
 	public void conectar() throws SQLException {
-		con = DriverManager.getConnection(cadConexionMySQLRemoto);
+		con = DriverManager.getConnection(cadConexionMySQL);
 	}
 	
 	public ResultSet ejecutarConsulta(String consultaSQL) {
