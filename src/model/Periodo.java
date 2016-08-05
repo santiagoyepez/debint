@@ -17,13 +17,13 @@ public class Periodo implements Serializable {
 	@Id
 	private int idPeriodo;
 
-	private int año;
+	private int anio;
 
 	private String parte;
 
-	//bi-directional many-to-one association to Categoria
+	/*//bi-directional many-to-one association to Categoria
 	@OneToMany(mappedBy="periodo")
-	private List<Categoria> categorias;
+	private List<Categoria> categorias;*/
 
 	public Periodo() {
 	}
@@ -36,12 +36,12 @@ public class Periodo implements Serializable {
 		this.idPeriodo = idPeriodo;
 	}
 
-	public int getAño() {
-		return this.año;
+	public int getAnio() {
+		return this.anio;
 	}
 
-	public void setAño(int año) {
-		this.año = año;
+	public void setAnio(int año) {
+		this.anio = año;
 	}
 
 	public String getParte() {
@@ -52,7 +52,7 @@ public class Periodo implements Serializable {
 		this.parte = parte;
 	}
 
-	public List<Categoria> getCategorias() {
+	/*public List<Categoria> getCategorias() {
 		return this.categorias;
 	}
 
@@ -72,6 +72,6 @@ public class Periodo implements Serializable {
 		categoria.setPeriodo(null);
 
 		return categoria;
-	}
+	}*/
 
 }

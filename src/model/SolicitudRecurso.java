@@ -23,9 +23,9 @@ public class SolicitudRecurso implements Serializable {
 
 	private String recursoSolicitado;
 
-	//bi-directional many-to-one association to Recurso
+	/*//bi-directional many-to-one association to Recurso
 	@OneToMany(mappedBy="solicitudRecurso")
-	private List<Recurso> recursos;
+	private List<Recurso> recursos;*/
 
 	public SolicitudRecurso() {
 	}
@@ -62,7 +62,7 @@ public class SolicitudRecurso implements Serializable {
 		this.recursoSolicitado = recursoSolicitado;
 	}
 
-	public List<Recurso> getRecursos() {
+	/*public List<Recurso> getRecursos() {
 		return this.recursos;
 	}
 
@@ -82,6 +82,6 @@ public class SolicitudRecurso implements Serializable {
 		recurso.setSolicitudRecurso(null);
 
 		return recurso;
-	}
+	}*/
 
 }

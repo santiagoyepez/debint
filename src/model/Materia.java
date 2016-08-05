@@ -19,9 +19,9 @@ public class Materia implements Serializable {
 
 	private String materia;
 
-	//bi-directional many-to-one association to Categoria
+	/*//bi-directional many-to-one association to Categoria
 	@OneToMany(mappedBy="materia")
-	private List<Categoria> categorias;
+	private List<Categoria> categorias;*/
 
 	//bi-directional many-to-one association to Carrera
 	@ManyToOne
@@ -47,7 +47,7 @@ public class Materia implements Serializable {
 		this.materia = materia;
 	}
 
-	public List<Categoria> getCategorias() {
+	/*public List<Categoria> getCategorias() {
 		return this.categorias;
 	}
 
@@ -67,7 +67,7 @@ public class Materia implements Serializable {
 		categoria.setMateria(null);
 
 		return categoria;
-	}
+	}*/
 
 	public Carrera getCarrera() {
 		return this.carrera;
@@ -76,5 +76,4 @@ public class Materia implements Serializable {
 	public void setCarrera(Carrera carrera) {
 		this.carrera = carrera;
 	}
-
 }
