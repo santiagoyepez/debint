@@ -11,9 +11,9 @@
 		<class>model.SolicitudRecurso</class>
 		<class>model.Usuario</class>
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://199.168.189.114:3306/integrae_appweb"/>
-			<property name="javax.persistence.jdbc.user" value="integrae_userApp"/>
-			<property name="javax.persistence.jdbc.password" value="AplicacionesWeb2016"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/debint"/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.password" value="1234"/>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
 		</properties>
 	</persistence-unit>

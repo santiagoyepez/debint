@@ -23,9 +23,9 @@ public class Recurso implements Serializable {
 
 	private byte visible;
 
-	//bi-directional many-to-one association to Comentario
+	/*//bi-directional many-to-one association to Comentario
 	@OneToMany(mappedBy="recurso")
-	private List<Comentario> comentarios;
+	private List<Comentario> comentarios;*/
 
 	//bi-directional many-to-one association to Categoria
 	@ManyToOne
@@ -77,7 +77,7 @@ public class Recurso implements Serializable {
 		this.visible = visible;
 	}
 
-	public List<Comentario> getComentarios() {
+	/*public List<Comentario> getComentarios() {
 		return this.comentarios;
 	}
 
@@ -97,7 +97,7 @@ public class Recurso implements Serializable {
 		comentario.setRecurso(null);
 
 		return comentario;
-	}
+	}*/
 
 	public Categoria getCategoria() {
 		return this.categoria;

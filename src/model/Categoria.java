@@ -27,9 +27,9 @@ public class Categoria implements Serializable {
 	@JoinColumn(name="IdPeriodo")
 	private Periodo periodo;
 
-	//bi-directional many-to-one association to Recurso
+	/*//bi-directional many-to-one association to Recurso
 	@OneToMany(mappedBy="categoria")
-	private List<Recurso> recursos;
+	private List<Recurso> recursos;*/
 
 	public Categoria() {
 	}
@@ -58,7 +58,7 @@ public class Categoria implements Serializable {
 		this.periodo = periodo;
 	}
 
-	public List<Recurso> getRecursos() {
+	/*public List<Recurso> getRecursos() {
 		return this.recursos;
 	}
 
@@ -78,6 +78,6 @@ public class Categoria implements Serializable {
 		recurso.setCategoria(null);
 
 		return recurso;
-	}
+	}*/
 
 }

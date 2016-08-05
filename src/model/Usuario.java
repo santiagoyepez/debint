@@ -22,20 +22,20 @@ public class Usuario implements Serializable {
 
 	private String apellido;
 
-	private String contraseña;
+	private String clave;
 
 	@Temporal(TemporalType.DATE)
 	private Date fechaRegistro;
 
 	private String nombre;
 
-	//bi-directional many-to-one association to Comentario
+	/*//bi-directional many-to-one association to Comentario
 	@OneToMany(mappedBy="usuario")
 	private List<Comentario> comentarios;
 
 	//bi-directional many-to-one association to Recurso
 	@OneToMany(mappedBy="usuario")
-	private List<Recurso> recursos;
+	private List<Recurso> recursos;*/
 
 	public Usuario() {
 	}
@@ -64,12 +64,12 @@ public class Usuario implements Serializable {
 		this.apellido = apellido;
 	}
 
-	public String getContraseña() {
-		return this.contraseña;
+	public String getClave() {
+		return this.clave;
 	}
 
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
+	public void setClave(String contraseña) {
+		this.clave = contraseña;
 	}
 
 	public Date getFechaRegistro() {
@@ -88,7 +88,7 @@ public class Usuario implements Serializable {
 		this.nombre = nombre;
 	}
 
-	public List<Comentario> getComentarios() {
+	/*public List<Comentario> getComentarios() {
 		return this.comentarios;
 	}
 
@@ -108,9 +108,9 @@ public class Usuario implements Serializable {
 		comentario.setUsuario(null);
 
 		return comentario;
-	}
+	}*/
 
-	public List<Recurso> getRecursos() {
+	/*public List<Recurso> getRecursos() {
 		return this.recursos;
 	}
 
@@ -130,6 +130,6 @@ public class Usuario implements Serializable {
 		recurso.setUsuario(null);
 
 		return recurso;
-	}
+	}*/
 
 }
