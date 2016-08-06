@@ -48,4 +48,5 @@ public class TablaPeriodo {
 		em.getTransaction().commit();
 		em.close();		
 	}
+
 }

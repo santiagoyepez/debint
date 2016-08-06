@@ -19,7 +19,7 @@ public class SrvCarrera {
 	public String registrar(Carrera c){
 		String ret = "carrera registrada";
 		if (!TablaCarrera.insertar(c)) ret = "error registro carrera";
-		return ret;
+		return "{\"mensaje\":\"" + ret + "\"}";
 	}
 	
 	@GET

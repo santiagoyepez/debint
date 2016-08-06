@@ -1,0 +1,70 @@
+<!-- Page Heading -->
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">
+             Recursos Disponibles
+        </h1>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="form-group">
+      <label>Consultar por código:</label>
+      <input type="text" name="idRecurso" class="form-control" ng-model="idRecurso" />
+    </div>
+    <input type="submit" value="Buscar" class="btn btn-primary" ng-click="buscarPorID(idRecurso)">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="form-group">
+      <label>Consultar por titulo:</label>
+      <input type="text" name="idRecurso" class="form-control" ng-model="tituloBuscar" />
+
+    </div>
+    <input type="submit" value="Buscar" class="btn btn-primary" ng-click="buscarPorTitulo(tituloBuscar)">
+
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel-group">
+
+
+        <div class="col-md-6" ng-repeat="recurso in recursos">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              {{recurso.titulo}}
+            </div>
+            <div class="panel-body">
+              <p>Descripción:
+                <br>
+                {{recurso.descripcion}}
+              </p>
+				<p>Código:
+                <br>
+                {{recurso.idRecurso}}
+              </p>
+              <p>Archivo:
+                <br>
+                {{recurso.nombreArchivo}}
+              </p>
+              <a href="{{directorioDescargas}}/{{recurso.nombreArchivo}}" download="{recurso.nombreArchivo}}">
+                <i class="fa fa-download" aria-hidden="true"></i> Descargar Archivo
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+    </div>
+
+
+  </div>
+</div>
+<!-- /.row -->

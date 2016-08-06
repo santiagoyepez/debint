@@ -8,7 +8,9 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
 import model.Periodo;
+import model.Recurso;
 import operador.TablaPeriodo;
+import operador.TablaRecurso;
 
 @Path("/periodo")
 @Produces("application/json")
@@ -19,7 +21,7 @@ public class SrvPeriodo {
 	public String registrar(Periodo p){
 		String ret = "periodo registrado";
 		if (!TablaPeriodo.insertar(p)) ret = "error registro periodo";
-		return ret;
+		return "{\"mensaje\":\"" + ret + "\"}";
 	}
 	
 	@GET
@@ -32,5 +34,12 @@ public class SrvPeriodo {
 	@Path("/consultar/{idPeriodo}")
 	public Periodo consultar(@PathParam("idPeriodo") int idPeriodo){
 		return TablaPeriodo.consultarPorId(idPeriodo);
+	}
+	
+	@POST
+	@Path("/eliminar/{idPeriodo}")
+	public String eliminar(@PathParam("idPeriodo") int idPeriodo){
+		TablaPeriodo.eliminar(idPeriodo);
+		return "{\"mensaje\":\"correcto\"}";
 	}
 }

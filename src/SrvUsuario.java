@@ -15,7 +15,7 @@ public class SrvUsuario {
 	public String registrar(Usuario u){
 		String ret = "registro correcto";
 		if (!TablaUsuario.registrar(u)) ret = "error registro";
-		return ret;
+		return "{\"mensaje\":\"" + ret + "\"}";
 	}
 	
 	@GET

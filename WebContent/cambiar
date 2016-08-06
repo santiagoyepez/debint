@@ -1,0 +1,28 @@
+En app.js cambiar por los datos del servidor
+Cambiar el directorio de descargas en el servicio
+
+Servicio Periodo
+
+	Operación			:	Consultar por idPeriodo
+	Método				:	GET
+	URL					:	[servidor]/[proyecto]/utl/periodo/consultar/{idPeriodo}
+	Parámetro esperado	:	idPeriodo (entero)
+
+	******************************************Cambiar a
+
+	Operación			:	Eliminar por idPeriodo
+	Método				:	POST
+	URL				:	[servidor]/[proyecto]/utl/periodo/eliminar
+	Parámetro esperado		:	idPeriodo (entero)
+
+
+Servicio recursos
+
+	El get de todos debe devolver
+	titulo
+	descripcion
+	nombreArchivo //Es un archivo mandar como enctype="multipart/form-data"
+
+
+Servicio materia
+	ver el id de materia como devuelve

@@ -35,11 +35,11 @@ public class TablaRecurso {
 		return query.getResultList();
 	}
 	
-	public static Recurso consultarPorId(int idRecurso){
+	public static List<Recurso> consultarPorId(int idRecurso){
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("PruebaJPA");
 		EntityManager em = emf.createEntityManager();
 		TypedQuery<Recurso> query = em.createQuery("SELECT r FROM Recurso r WHERE idRecurso = " + idRecurso, Recurso.class);
-		return query.getSingleResult();
+		return query.getResultList();
 	}
 	
 	public static List<Recurso> consultarPorCategoria(int idCategoria){

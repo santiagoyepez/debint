@@ -21,6 +21,8 @@ public class Recurso implements Serializable {
 
 	private String titulo;
 
+	private String nombreArchivo;
+	
 	private byte visible;
 
 	/*//bi-directional many-to-one association to Comentario
@@ -121,6 +123,14 @@ public class Recurso implements Serializable {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+
+	public String getNombreArchivo() {
+		return nombreArchivo;
+	}
+
+	public void setNombreArchivo(String nombreArchivo) {
+		this.nombreArchivo = nombreArchivo;
 	}
 
 }

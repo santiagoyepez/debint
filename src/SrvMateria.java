@@ -20,7 +20,7 @@ public class SrvMateria {
 	public String registrar(Materia m){
 		String ret = "materia registrada";
 		if (!TablaMateria.insertar(m)) ret = "error registro materia";
-		return ret;
+		return "{\"mensaje\":\"" + ret + "\"}";
 	}
 	
 	@GET

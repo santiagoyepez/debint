@@ -19,7 +19,7 @@ public class SrvRecurso {
 	public String registrar(Recurso r){
 		String ret = "recurso registrado";
 		if (!TablaRecurso.insertar(r)) ret = "error registro recurso";
-		return ret;
+		return "{\"mensaje\":\"" + ret + "\"}";
 	}
 	
 	@GET
@@ -30,7 +30,7 @@ public class SrvRecurso {
 	
 	@GET
 	@Path("/consultar/{idRecurso}")
-	public Recurso consultar(@PathParam("idRecurso") int idRecurso){
+	public List<Recurso> consultar(@PathParam("idRecurso") int idRecurso){
 		return TablaRecurso.consultarPorId(idRecurso);
 	}
 	

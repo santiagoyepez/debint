@@ -18,7 +18,7 @@ public class SrvSolicitudRecurso {
 	public String registrar(SolicitudRecurso sr){
 		String ret = "solicitud registrada";
 		if (!TablaSolicitudRecurso.insertar(sr)) ret = "error registro solicitud";
-		return ret;
+		return "{\"mensaje\":\"" + ret + "\"}";
 	}
 	
 	@GET

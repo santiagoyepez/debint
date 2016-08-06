@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -8,21 +8,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title><%=tituloPagina%></title>
+    <meta charset="UTF-8">
+    <title>DEBINT</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="/debint/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="/debint/css/sb-admin.css" rel="stylesheet">
+    <link href="css/sb-admin.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="/debint/css/plugins/morris.css" rel="stylesheet">
+    <link href="css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="/debint/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <!--Servicios-->
+    <script src="js/servicios/periodo.js" charset="utf-8"></script>
+    <script src="js/servicios/solicitarRecurso.js" charset="utf-8"></script>
+    <script src="js/servicios/recursos.js" charset="utf-8"></script>
+    <script src="js/servicios/panelAdministrador.js" charset="utf-8"></script>
+
+    <!--Controladores-->
+    <script src="js/controladores/inicio.js"></script>
+    <script src="js/controladores/periodo.js"></script>
+    <script src="js/controladores/solicitarRecurso.js"></script>
+    <script src="js/controladores/recursos.js"></script>
+    <script src="js/controladores/compartirRecurso.js"></script>
+    <script src="js/controladores/panelAdministrador.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -32,7 +49,7 @@
 
 </head>
 
-<body>
+<body ng-app="aplicacion">
 
     <div id="wrapper">
 
@@ -46,17 +63,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/debint/ListarRecursosCtrl"><img src="/debint/img/logo.png" id="logo" alt="logo de debint"/><p id="textoLogo">DEBINT</p></a>
+                <a class="navbar-brand" ui-sref="inicio"><img src="img/logo.png" id="logo" alt="logo de debint"/><p id="textoLogo">DEBINT</p></a>
             </div>
             <!-- Top Menu Items -->
-            <ul class="nav navbar-right top-nav">
-                
-                
+            <!-- <ul class="nav navbar-right top-nav">
+
+
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Usuario <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="#"><i class="fa fa-fw fa-user"></i> Iniciar Sesión</a>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Iniciar SesiÃ³n</a>
                         </li>
                         <li class="divider"></li>
                         <li>
@@ -64,9 +81,9 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
-            
-            
+            </ul> -->
+
+
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
@@ -74,31 +91,29 @@
                      <p>General</p>
                     </li>
                     <li>
-                        <a href="/debint/ListarRecursosCtrl"><i class="fa fa-file-text-o" aria-hidden="true"></i> Recursos Disponibles</a>
+                        <a ui-sref="recursos"><i class="fa fa-file-text-o" aria-hidden="true"></i> Recursos Disponibles</a>
                     </li>
                     <li>
-                        <a href="/debint/ListarSolicitudesCtrl"><i class="fa fa-comment-o" aria-hidden="true"></i> Solicitudes de recursos</a>
+                        <a ui-sref="solicitarRecurso"><i class="fa fa-comment-o" aria-hidden="true"></i> Solicitudes de recursos</a>
                     </li>
                 	<li class="separador">
-                     <p>Configuración</p>
+                     <p>ConfiguraciÃ³n</p>
                     </li>
                     <!-- <li class="active"> -->
                     <li>
-                        <a href="/debint/periodoBuscarPeriodos"><i class="fa fa-calendar" aria-hidden="true"></i> Periodos Académicos</a>
+                        <a ui-sref="periodo"><i class="fa fa-calendar" aria-hidden="true"></i> Periodos AcadÃ©micos</a>
                     </li>
                     <li>
-                        <a href="/debint/vistas/panelAdmin/panelAdmin.jsp"><i class="fa fa-pencil" aria-hidden="true"></i> Carreras - Materias</a>
+                        <a ui-sref="panelAdministrador"><i class="fa fa-pencil" aria-hidden="true"></i> Carreras - Materias</a>
                     </li>
                     <li class="separador">
                      <p>Recursos</p>
                     </li>
                     <li>
-                        <a href="/debint/vistas/recurso/compartirRecurso.jsp"><i class="fa fa-share-alt" aria-hidden="true"></i> Compartir Recursos</a>
+                        <a ui-sref="compartirRecurso"><i class="fa fa-share-alt" aria-hidden="true"></i> Compartir Recursos</a>
                     </li>
-                    <li>
-                        <a href="/debint/vistas/recurso/solicitudRecurso.jsp"><i class="fa fa-bullhorn" aria-hidden="true"></i> Solicitar Recurso</a>
-                    </li>
-                   
+
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -107,19 +122,41 @@
 
             <div class="container-fluid">
 
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            <%=tituloPagina%>
-                        </h1>
-                   
-                    </div>
-                </div>
+
                 <!-- /.row -->
-                
+
+                <!--CONTENIDO-->
+
+                <div ui-view></div>
 
 
 
 
-	
+
+
+
+
+
+
+
+
+                <!--CONTENIDO-->
+
+
+
+                        </div>
+                        <!-- /#page-wrapper -->
+
+                    </div>
+                    <!-- /#wrapper -->
+
+                    <!-- jQuery -->
+                    <script src="js/jquery.js"></script>
+
+                    <!-- Bootstrap Core JavaScript -->
+                    <script src="js/bootstrap.min.js"></script>
+
+
+                </body>
+
+                </html>

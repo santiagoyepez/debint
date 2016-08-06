@@ -19,7 +19,7 @@ public class SrvCategoria {
 	public String registrar(Categoria c){
 		String ret = "categoria registrada";
 		if (!TablaCategoria.insertar(c)) ret = "error registro categoria";
-		return ret;
+		return "{\"mensaje\":\"" + ret + "\"}";
 	}
 	
 	@GET
