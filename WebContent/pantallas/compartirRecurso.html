@@ -13,20 +13,20 @@
 
     <form>
       <div class="form-group">
-        <label>Titulo:</label>
-        <input type="text" name="titulo" class="form-control" ng-model="titulo"/>
+        <label>Titulo:</label>{{recurso.titulo}}
+        <input type="text" name="titulo" class="form-control" ng-model="recurso.titulo"/>
       </div>
 
       <div class="form-group">
         <label>Descripcion:</label>
-        <input type="text" name="descripcion" class="form-control" ng-model="descripcion"/>
+        <input type="text" name="descripcion" class="form-control" ng-model="recurso.descripcion"/>
       </div>
 
       <div class="form-group">
-        <input type="file" name="files" id="files" ng-model="nombreArchivo" />
+        <input type="file" name="files" id="files" ng-model="recurso.nombreArchivo" />
       </div>
 
-      <input type="submit" value="Subir" class="btn btn-primary" ng-click="compartirRecurso(titulo, descripcion, nombreArchivo)"/>
+      <input type="submit" value="Subir" class="btn btn-primary" />
     </form>
   </div>
 </div>

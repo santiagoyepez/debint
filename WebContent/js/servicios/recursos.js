@@ -1,4 +1,5 @@
 var aplicacion = angular.module('aplicacion');
+
 aplicacion.service('recursos', function($http, $rootScope) {
   var path = $rootScope.servidor+"/"+$rootScope.proyecto+"/"+$rootScope.aplicationPath+"/";
 
@@ -14,18 +15,19 @@ aplicacion.service('recursos', function($http, $rootScope) {
   }
 
 
-  this.compartirRecurso = function(titulo, descripcion, nombreArchivo) {
+  this.compartirRecurso = function(recurso) {
     return $http({
       method: 'POST',
       url: path+'recurso/registrar',
-      data: {
+      data: recurso
+      /*{
         'titulo' : titulo,
         'descripcion': descripcion,
         'idUsuario':8,
         'idCategoria':1,
         'visible':1
         //'nombreArchivo':nombreArchivo
-      }
+      }*/
     });
   }
 
