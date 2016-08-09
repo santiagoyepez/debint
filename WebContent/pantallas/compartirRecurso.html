@@ -13,7 +13,7 @@
 
     <form>
       <div class="form-group">
-        <label>Titulo:</label>{{recurso.titulo}}
+        <label>Titulo:</label>
         <input type="text" name="titulo" class="form-control" ng-model="recurso.titulo"/>
       </div>
 
@@ -26,7 +26,7 @@
         <input type="file" name="files" id="files" ng-model="recurso.nombreArchivo" />
       </div>
 
-      <input type="submit" value="Subir" class="btn btn-primary" />
+      <input type="submit" value="Subir" class="btn btn-primary" ng-click="compartirRecurso();"/>
     </form>
   </div>
 </div>

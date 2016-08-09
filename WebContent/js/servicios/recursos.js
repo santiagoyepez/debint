@@ -20,14 +20,6 @@ aplicacion.service('recursos', function($http, $rootScope) {
       method: 'POST',
       url: path+'recurso/registrar',
       data: recurso
-      /*{
-        'titulo' : titulo,
-        'descripcion': descripcion,
-        'idUsuario':8,
-        'idCategoria':1,
-        'visible':1
-        //'nombreArchivo':nombreArchivo
-      }*/
     });
   }
 

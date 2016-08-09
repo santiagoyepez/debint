@@ -16,20 +16,20 @@ aplicacion.controller('recursos',function($scope, recursos){
   $scope.tituloBuscar="";
   $scope.idRecurso="";
 
-  $scope.buscarPorID = function(idRecurso){
-    recursos.buscarPorID(idRecurso).then(function(response) {
+  $scope.buscarPorID = function(){
+    recursos.buscarPorID($scope.idRecurso).then(function(response) {
       $scope.recursos = response.data;
     }, function(response) {
       alert("Error");
     });
   }
 
-  $scope.buscarPorTitulo = function(tituloBuscar){
-    recursos.buscarPorTitulo(tituloBuscar).then(function(response) {
+  $scope.buscarPorTitulo = function(){
+    recursos.buscarPorTitulo($scope.tituloBuscar).then(function(response) {
       $scope.recursos = response.data;
     }, function(response) {
       alert("Error");
     });
   }
 
-});//Controlador
+});

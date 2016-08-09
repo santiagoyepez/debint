@@ -12,14 +12,12 @@ aplicacion.controller('solicitarRecurso',function($scope, solicitarRecurso){
   $scope.recursoSolicitado="";
   $scope.comentario="";
 
-  $scope.solicitarRecurso = function(recursoSolicitado, comentario){
-    solicitarRecurso.registrarSolicitudRecurso(recursoSolicitado, comentario).then(function(response) {
+  $scope.solicitarRecurso = function(){
+    solicitarRecurso.registrarSolicitudRecurso($scope.recursoSolicitado, $scope.comentario).then(function(response) {
       alert("Ingresado Correctamente");
-
-      //Vuelvo a leer
       leerRecursos();
     }, function(response) {
       alert("Error");
     });
   }
-});//Controlador
+});

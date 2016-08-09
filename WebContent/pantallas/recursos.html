@@ -14,7 +14,7 @@
       <label>Consultar por código:</label>
       <input type="text" name="idRecurso" class="form-control" ng-model="idRecurso" />
     </div>
-    <input type="submit" value="Buscar" class="btn btn-primary" ng-click="buscarPorID(idRecurso)">
+    <input type="submit" value="Buscar" class="btn btn-primary" ng-click="buscarPorID()">
   </div>
 </div>
 
@@ -25,7 +25,7 @@
       <input type="text" name="idRecurso" class="form-control" ng-model="tituloBuscar" />
 
     </div>
-    <input type="submit" value="Buscar" class="btn btn-primary" ng-click="buscarPorTitulo(tituloBuscar)">
+    <input type="submit" value="Buscar" class="btn btn-primary" ng-click="buscarPorTitulo()">
 
   </div>
 </div>
@@ -54,7 +54,7 @@
                 <br>
                 {{recurso.nombreArchivo}}
               </p>
-              <a href="{{directorioDescargas}}/{{recurso.nombreArchivo}}" download="{recurso.nombreArchivo}}">
+              <a href="{{directorioDescargas}}/{{recurso.nombreArchivo}}" download="{{recurso.nombreArchivo}}">
                 <i class="fa fa-download" aria-hidden="true"></i> Descargar Archivo
               </a>
             </div>
